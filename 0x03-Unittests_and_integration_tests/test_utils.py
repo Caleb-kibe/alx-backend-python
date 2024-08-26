@@ -16,10 +16,10 @@ class TestAccessNestedMap(unittest.TestCase):
         ({"a": {"b": 2}}, ("a",), {"b": 1}),
         ({"a": {"b": 2}}, ("a", "b"), 2),
     ])
-
     """Tests `access_nested_map`'s output."""
     def test_access_nested_map(self, nested_map, path, expected):
         self.assertEqual(access_nested_map(nested_map, path), expected)
+
 
 if __name__ == "__main__":
     unittest.main()
